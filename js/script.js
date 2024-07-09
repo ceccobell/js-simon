@@ -28,7 +28,20 @@ setTimeout(function () {
     let nums = prompt("Inserisci i numeri separati da virgole:");
 
     let nums_array = nums.split(',');
-
     console.log(nums_array)
 
+    let count = 0
+    let guessed_nums = []
+    // cicli annidati per controllare quali numeri sono stati indovinati
+    for (let i = 0; i < random_nums.length; i++) {
+        for (let j = 0; j < nums_array.length; j++) {
+            if (random_nums[i] == parseInt(nums_array[j])) {
+                count++
+                if (!guessed_nums.includes(random_nums[i])) {
+                    guessed_nums.push(random_nums[i])
+                }
+            }
+        }
+    }
+    console.log("I numeri indovinati sono:", guessed_nums)
 }, 2500)
