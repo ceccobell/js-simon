@@ -12,15 +12,15 @@ while (random_nums.length < 5) {
     if (!random_nums.includes(generate_num)) {
         random_nums.push(generate_num)
         document.getElementById("numbers").innerHTML += " " + generate_num
+        document.getElementById("numbers").style.fontSize = "30px"
     }
 
 }
-console.log(random_nums)
 
 // funzione che elimina i numeri dopo x secondi
 setTimeout(function () {
     document.getElementById("numbers").innerHTML = ""
-}, 2000)
+}, 3000)
 
 // funzione che serve per far compire il messaggio di inserire i numeri dopo la loro scomparsa dallo schermo
 setTimeout(function () {
@@ -43,5 +43,6 @@ setTimeout(function () {
             }
         }
     }
-    console.log("I numeri indovinati sono:", guessed_nums)
-}, 2500)
+    document.getElementById("guessed-numbers").innerHTML = "Hai indovinato " + count + " numeri: " + guessed_nums
+    document.getElementById("guessed-numbers").style.fontSize = "30px"
+}, 3500)
