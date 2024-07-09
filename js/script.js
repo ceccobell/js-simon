@@ -14,3 +14,6 @@ while (random_nums.length < 5) {
 }
 console.log(random_nums)
 
+setTimeout(function () {
+    document.getElementById("numbers").innerHTML = ""
+}, 2000)
