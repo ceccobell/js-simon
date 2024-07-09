@@ -8,6 +8,9 @@ while (random_nums.length < 5) {
     let generate_num = generateRandomNums()
     if (!random_nums.includes(generate_num)) {
         random_nums.push(generate_num)
+        document.getElementById("numbers").innerHTML += " " + generate_num
     }
+
 }
 console.log(random_nums)
+
